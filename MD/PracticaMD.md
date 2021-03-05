@@ -4,18 +4,16 @@ En esta practica se ha realizado difrentes funcionalidades:
 1. Harpadeo de LED.
 2. Encender LED.
 3. Apagar LED. 
-4. 
+4. Medir tension de pin y simularla en otro. 
 5. Leer la temperatura interna del processador.
 
 Las funcionalidades estan controladas a través de un menú interactivo. 
 
-## CODIGO
+## CÓDIGO
 
 Para su mejor comprension dividíe el codigo en diferentes partes:
 
-### 
-
-Cabezera
+* Cabezera
 
 ```cpp
 
@@ -26,18 +24,15 @@ int LED=2;
 
 ```
 
-###
-
-Parpadeo led:
+* Parpadeo led:
 
 ```cpp
 
 void led_blink(){
     Serial.println();
 
-// if(Serial.available()){
     int i=0;
-while(i<10){
+    while(i<10){
 
    Serial.println("ON");
   digitalWrite(LED,HIGH);
@@ -50,9 +45,8 @@ while(i<10){
 }
 
 ```
-###
 
-Encendido y apagado de LED.
+* Encendido y apagado de LED.
 
 ```cpp
 void led_off(){
@@ -70,9 +64,7 @@ void led_on(){
 }
 ```
 
-###
-
-Lectura de voltage y salida del mismo.
+* Lectura de voltage y salida del mismo.
 
 ```cpp
 void ad_da_for5secs(){
@@ -96,9 +88,7 @@ void ad_da_for5secs(){
 }
 ```
 
-###
-
-Temperatura: 
+* Temperatura: 
 
 ```cpp
 void temp(){
@@ -113,12 +103,8 @@ void temp(){
     Serial.println(T2); 
 }
 ```
-
-###
-
-Menú:
+* Menú:
 ```cpp
-
 void menu(){
 
     if(Serial.available()){
@@ -152,7 +138,7 @@ void menu(){
         Serial.println("Option a - LED blink");
         Serial.println("Option b - LED on");
         Serial.println("Option c - LED off");
-        // Serial.println("Option d - Read Analog Voltage - Set output Voltage");
+        Serial.println("Option d - Read Analog Voltage - Set output Voltage");
         Serial.println("Option e - Read MP temperature");
 
     }
@@ -160,9 +146,7 @@ void menu(){
 }
 ```
 
-###
-
-Cuerpo: 
+* Cuerpo: 
 
 ```cpp
 void setup() {
@@ -183,7 +167,8 @@ void setup() {
 
 void loop() {
 
-    menu();   
+    menu();
+    
 
 }
 ```
@@ -191,9 +176,12 @@ void loop() {
   
 ## Referencia
 
-* https://github.com/schacon/blink
-
+ https://github.com/PauAnton/Practica1
 
 ## Diagrama de flujo
 
+![] (Dibujo1.jpg)
+
 ## Diagrama de tiempos
+
+![] (wavedrom.png)

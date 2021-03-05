@@ -3,9 +3,6 @@
 
    
 
-
-//give permissions to upload: sudo chmod a+rw /dev/ttyUSB0
-
 int LED=2;
 
 
@@ -13,7 +10,6 @@ int LED=2;
 void led_blink(){
     Serial.println();
 
-// if(Serial.available()){
     int i=0;
 while(i<10){
 
