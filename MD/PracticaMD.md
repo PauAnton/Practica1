@@ -1,4 +1,4 @@
-# PRACTICA 1  :  lED BLINK
+# PRACTICA 1  :  LED BLINK
 
 En esta practica se ha realizado difrentes funcionalidades: 
 1. Harpadeo de LED.
@@ -180,8 +180,8 @@ void loop() {
 
 ## Diagrama de flujo
 
-![] (Dibujo1.jpg)
+![](Dibujo1.jpg)
 
 ## Diagrama de tiempos
 
-![] (wavedrom.png)
+![](wavedrom.png)
